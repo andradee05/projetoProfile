@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+main {
+   display: grid;
+   grid-template-columns: 1000px;
+   grid-template-rows: 48px 454px;
+   justify-content: center;
+   align-content: center;
+
+   min-height: 100vh;
+}
+
+main header h1 {
+    font-size: 6.4rem;
+    position: absolute;
+}
+
+main section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+main section .column-left {
+    color: #fff;
+    background-color: #1F4954;
+
+    min-height: 46rem;
+    max-width: 64rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+
+    padding: 2.4rem;
+}
+
+main section .column-left .header h3 {
+    font-size: 4rem;
+}
+
+main section .column-left .header h3::after {
+    content: "";
+
+    display: block;
+    width: 11rem;
+    height: 0.4rem;
+
+    background-color: #fff;
+
+    margin-top: 1.6rem;
+}
+
+main section .column-left .content p {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2rem;
+}
+
+main section .column-left .content p:nth-child(2) {
+    margin-top: 3.2rem;
+}
+
+main section .column-left .footer i {
+    font-size: 3.2rem;
+}
+
+main section .column-right img {
+    object-fit: cover;
+    height: 464px;
+}
+
+
+@media screen and (max-width: 800px){
+    main{
+        grid-template-columns: 448px;
+        grid-template-rows: 22px 592px;
+        overflow-x: hidden;
+    }
+
+    main section {
+        grid-template-columns: 440px;
+        grid-template-rows: none;
+    }
+
+    main section .column-right img {
+        display: none;
+    }
+
+    main section .column-left {
+        padding: 2rem 1.6rem;
+        width: 480px;
+        height: 480px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    main {
+        grid-template-columns: 400px;
+    }
+
+    main section .column-left {
+        width: 400px;
+        height: 400px;
+    }
+
+    main section .column-left .header h3 {
+        font-size: 3.2rem;
+    }
+}
